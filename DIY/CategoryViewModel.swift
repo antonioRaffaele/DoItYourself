@@ -14,12 +14,15 @@ class CategoryViewModel: ObservableObject {
     @Published var searchText: String = ""
     
     var filteredCategories: [Category] {
-        guard !searchText.isEmpty else {return categories}
-        
-        return categories.filter {
-            categories in categories.name.lowercased().contains(searchText.lowercased())
+        guard !searchText.isEmpty else { return categories }
+
+        return categories.filter { category in
+            category.name.localizedCaseInsensitiveContains(searchText)
         }
     }
+    
+    
+        
     
     init() {
         fetchCategories()

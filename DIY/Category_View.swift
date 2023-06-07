@@ -4,11 +4,14 @@
 //
 //  Created by Antonio Raffaele Sparano on 07/06/23.
 //
-
+// Aggiornamento 07/06 23.33 implementata la searchbar aggiustato il comportamento dei risultati
 import SwiftUI
 
 struct Category_View: View {
-    @StateObject var viewModel = CategoryViewModel()
+    @StateObject private var viewModel = CategoryViewModel()
+    
+    @State var tabSelection: Int = 0
+    @State var tabArray = ["Home", "favorites"]
     
     let columns = [
         GridItem(.adaptive(minimum: 100))
@@ -18,40 +21,24 @@ struct Category_View: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 0) {
-                    ForEach(viewModel.categories){ category in
+                    ForEach(viewModel.filteredCategories){ category in
                         NavigationLink(destination: Tutorial_View(category: "category")) {
                             VStack {
                                 Image(category.image).resizable().frame(maxWidth: 120, maxHeight: 120).scaledToFill()
                                     .padding()
-                                    .background(Color.purple)
+                                    .background(Color.green.gradient)
                                     .cornerRadius(16)
                                 Text(category.name)
                             }
                             .padding()
                         }
-                        .searchable(text: $viewModel.searchText)
+                        
                     }
                 }
                 .padding()
-            }.navigationTitle("Categories")
-                .frame(alignment: .leading)
-            
-            
-            // View, ossia come utilizzare i dati per disegnare l'interfaccia
-            /*
-             VStack {
-             // metto ForEach xkè devo utilizzare tutte le istanze delle categorie che sono nella raccolta delle istanze che ho chiamato nei DATA , categories
-             
-             ForEach(categories){ category in
-             
-             Text(category.name)
-             
-             
-             
-             
-             }
-             }
-             */
+            }
+            .searchable(text: $viewModel.searchText, prompt: "Search")
+            .navigationTitle("Categories")
         }
     }
 }
