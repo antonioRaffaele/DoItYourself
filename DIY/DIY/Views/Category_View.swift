@@ -7,6 +7,16 @@
 // Aggiornamento 07/06 23.33 implementata la searchbar aggiustato il comportamento dei risultati
 import SwiftUI
 
+
+
+func tutorialsForACategory(category: Category) -> [Tutorial] {
+    return associazioni.filter({ associazione in
+        associazione.category.id == category.id
+    }).map({ associazione in
+        associazione.tutorial
+    })
+}
+
 struct Category_View: View {
     @StateObject private var viewModel = CategoryViewModel()
 
@@ -19,7 +29,7 @@ struct Category_View: View {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 0) {
                         ForEach(viewModel.filteredCategories){ category in
-                            NavigationLink(destination: Tutorial_View(category: "category")) {
+                            NavigationLink(destination: Tutorial_View(TutorialsToDisplay: tutorialsForACategory(category: category))) {
                                 VStack {
                                     Image(category.image).resizable().frame(maxWidth: 120, maxHeight: 120).scaledToFill()
                                         .padding()

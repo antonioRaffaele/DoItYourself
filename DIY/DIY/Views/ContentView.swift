@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Received", systemImage: "house")
                         
                 }
-            Tutorial_View(category: "")
+            Tutorial_View(TutorialsToDisplay: [])
                 .tabItem {
                     Label("Sent", systemImage: "star")
                         

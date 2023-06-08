@@ -9,18 +9,17 @@ import Foundation
 
 // Properties with no default values (Proprietà senza valori predefiniti)
 
-struct Category :Identifiable {
+struct Category: Identifiable {
 
-    var id = UUID()
+    var id: Int
     var name: String
     var image: String
-    var tutorials: [Tutorial] = []
 
 }
 
-struct Tutorial :Identifiable {
+struct Tutorial: Identifiable {
 
-    var id = UUID()
+    var id: Int
     var name: String
     var image: String
     var description: String
@@ -33,19 +32,19 @@ struct Tutorial :Identifiable {
     // [Step] in swift rappresenta un array, in questo caso uso l'array perchè devo rappresentare il lato MOLTI
 }
 
-struct Step :Identifiable {
+struct Step: Identifiable {
 
-    var id = UUID()
+    var id: Int
     var image: String
     var description: String
 
 }
 
-//struct CategoryTutorial {
-//
-//    // sto associando due entità: categoria e tutorial
-//
-//    var category:Category
-//    var tutorial:Tutorial
-//
-//}
+struct CategoryTutorial {
+
+    // sto associando due entità: categoria e tutorial
+
+    var category:Category
+    var tutorial:Tutorial
+
+}
