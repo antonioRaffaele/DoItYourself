@@ -15,7 +15,7 @@ struct ContentView: View {
                     Label("Received", systemImage: "house")
                         
                 }
-            FavoritesView()
+            Tutorial_View(category: "")
                 .tabItem {
                     Label("Sent", systemImage: "star")
                         

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct Tutorial_View: View {
     let category: String
     

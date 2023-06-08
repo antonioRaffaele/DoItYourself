@@ -9,16 +9,12 @@ import SwiftUI
 
 struct Category_View: View {
     @StateObject private var viewModel = CategoryViewModel()
-    
-    @State var tabSelection: Int = 0
-    @State var tabArray = ["Home", "favorites"]
-    
+
     let columns = [
         GridItem(.adaptive(minimum: 100))
     ]
     
     var body: some View {
-       
             NavigationView {
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 0) {
