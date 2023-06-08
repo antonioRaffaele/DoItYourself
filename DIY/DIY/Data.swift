@@ -24,7 +24,7 @@ let shorts = Category(name: "Shorts", image: "shorts")
 let skirt = Category(name: "Skirt", image: "clothes")
 let socks = Category(name: "Socks", image: "socks")
 let sweater = Category(name: "Sweater", image: "sweater")
-let t_shirt = Category(name: "T-shirt", image: "tshirt")
+let t_shirt = Category(name: "T-Shirt", image: "tshirt")
 let tie = Category(name: "Tie", image: "tie")
 
 // raccolta di tutte le istanze delle categorie
