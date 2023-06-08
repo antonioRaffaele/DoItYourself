@@ -13,13 +13,15 @@ struct ContentView: View {
             Category_View()
                 .tabItem {
                     Label("Received", systemImage: "house")
+                        
                 }
             FavoritesView()
                 .tabItem {
                     Label("Sent", systemImage: "star")
+                        
                 }
-        }
-    }
+        }  .accentColor(Color("color1"))
+    } 
 }
 
 struct ContentView_Previews: PreviewProvider {

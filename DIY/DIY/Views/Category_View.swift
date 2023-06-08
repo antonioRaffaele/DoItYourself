@@ -27,9 +27,10 @@ struct Category_View: View {
                                 VStack {
                                     Image(category.image).resizable().frame(maxWidth: 120, maxHeight: 120).scaledToFill()
                                         .padding()
-                                        .background(Color.green.gradient)
+                                        .background(Color("color2"))
                                         .cornerRadius(16)
                                     Text(category.name)
+                                        .foregroundColor(Color.black)
                                 }
                                 .padding()
                             }
@@ -38,7 +39,7 @@ struct Category_View: View {
                     }
                     .padding()
                 }
-                .searchable(text: $viewModel.searchText, prompt: "Search")
+                .searchable(text: $viewModel.searchText, prompt: "What you want to transform?")
                 .navigationTitle("Categories")
             }
         

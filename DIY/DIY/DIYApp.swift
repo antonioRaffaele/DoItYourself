@@ -11,7 +11,7 @@ import SwiftUI
 struct DIYApp: App {
     var body: some Scene {
         WindowGroup {
-            Category_View()
+            ContentView()
         }
     }
 }
