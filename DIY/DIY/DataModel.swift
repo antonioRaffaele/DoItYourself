@@ -14,6 +14,7 @@ struct Category :Identifiable {
     var id = UUID()
     var name: String
     var image: String
+    var tutorials: [Tutorial] = []
 
 }
 
@@ -40,11 +41,11 @@ struct Step :Identifiable {
 
 }
 
-struct CategoryTutorial {
-
-    // sto associando due entità: categoria e tutorial
-
-    var category:Category
-    var tutorial:Tutorial
-
-}
+//struct CategoryTutorial {
+//
+//    // sto associando due entità: categoria e tutorial
+//
+//    var category:Category
+//    var tutorial:Tutorial
+//
+//}
