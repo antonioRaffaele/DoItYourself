@@ -40,7 +40,7 @@ struct Category_View: View {
                     .padding()
                 }
                 .searchable(text: $viewModel.searchText, prompt: "What you want to transform?")
-                .navigationTitle("cacca pupu")
+                .navigationTitle("Categories")
             }
         
     }
