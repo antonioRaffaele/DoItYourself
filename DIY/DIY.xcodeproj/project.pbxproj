@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72381C9B2A337EB40003CCC7 /* Favorites_Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72381C9A2A337EB40003CCC7 /* Favorites_Tutorial.swift */; };
 		D60BEFEF2A3081F2001EF681 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFEE2A3081F2001EF681 /* Data.swift */; };
 		D60BEFF12A30823A001EF681 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF02A30823A001EF681 /* DataModel.swift */; };
 		D60BEFF32A308286001EF681 /* Category_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF22A308286001EF681 /* Category_View.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72381C9A2A337EB40003CCC7 /* Favorites_Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites_Tutorial.swift; sourceTree = "<group>"; };
 		D60BEFEE2A3081F2001EF681 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D60BEFF02A30823A001EF681 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D60BEFF22A308286001EF681 /* Category_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category_View.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				D60BEFFC2A31CB5C001EF681 /* Views */,
 				D60BEFF02A30823A001EF681 /* DataModel.swift */,
 				D60BEFEE2A3081F2001EF681 /* Data.swift */,
+				72381C9A2A337EB40003CCC7 /* Favorites_Tutorial.swift */,
 				D6ABF3CD2A30722100E39D6F /* DIYApp.swift */,
 				D6ABF3D12A30722200E39D6F /* Assets.xcassets */,
 				D6ABF3D32A30722200E39D6F /* Preview Content */,
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60BEFF72A30BE1D001EF681 /* CategoryViewModel.swift in Sources */,
+				72381C9B2A337EB40003CCC7 /* Favorites_Tutorial.swift in Sources */,
 				D60BEFF92A31CA65001EF681 /* ContentView.swift in Sources */,
 				D60BEFF12A30823A001EF681 /* DataModel.swift in Sources */,
 				D60BEFF52A309988001EF681 /* Tutorial_View.swift in Sources */,

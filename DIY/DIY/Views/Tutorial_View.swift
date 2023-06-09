@@ -29,6 +29,11 @@ struct Tutorial_View: View {
                             HStack {
                                 Text(String(display.duration))
                             }
+                            Text("SALVARE").onTapGesture {
+                                let gestoreFavoriti = Favorites()
+                                gestoreFavoriti.add(display)
+                                gestoreFavoriti.save()
+                            }
                         }
                     }
                     .background(Color.purple)

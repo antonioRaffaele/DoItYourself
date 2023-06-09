@@ -7,7 +7,17 @@
 
 import SwiftUI
 
+let gestoreFavoriti = Favorites()
+
+func tutorialsInFavorites() -> [Tutorial] {
+    return tuttiITutorial.filter({ tutorial in
+        gestoreFavoriti.contains(tutorial)
+    })
+}
+
 struct ContentView: View {
+    @State var tutorialPrferiti = tutorialsInFavorites()
+    
     var body: some View {
         TabView {
             Category_View()
@@ -15,10 +25,13 @@ struct ContentView: View {
                     Label("Received", systemImage: "house")
                         
                 }
-            Tutorial_View(TutorialsToDisplay: [])
+            Tutorial_View(TutorialsToDisplay: tutorialPrferiti)
                 .tabItem {
-                    Label("Sent", systemImage: "star")
+                    Label("Saved", systemImage: "star")
                         
+                }
+                .onChange(of: gestoreFavoriti) { _ in
+                    tutorialPrferiti = tutorialsInFavorites()
                 }
         }  .accentColor(Color("color1"))
     } 

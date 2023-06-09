@@ -34,11 +34,26 @@ let categories: [Category] = [
 
 ]
 
-let tut1 = Tutorial(id: 1, name: "From t-shirt to bag", image: "borsa_finita", description: "bla bla bla", duration: 30, steps: [])
-let tut2 = Tutorial(id: 2, name: "From ties to skirts", image: "step_1", description: "bla bla bla", duration: 20, steps: [])
+let tut1 = Tutorial(id: 1, name: "Dalla cintura alla mensola vintage", image: "mensola_vintage", description: "bla bla bla", duration: 30, steps: [])
+
+let tut2 = Tutorial(id: 2, name: "Dalla cintura al portariviste", image: "portariviste_finito", description: "bla bla bla", duration: 20, steps: [])
+
+let tut3 = Tutorial(id: 3, name: "Dalla cintura alla sedia rivestita", image: "sedia_rivestita", description: "bla bla bla", duration: 20, steps: [])
+
+let tuttiITutorial: [Tutorial] = [
+    tut1,tut2,tut3
+]
+
+
+//istanzio le associazioni
 
 let associazioni: [CategoryTutorial] = [
-    CategoryTutorial(category: t_shirt, tutorial: tut1),
-    CategoryTutorial(category: tie, tutorial: tut2),
-    CategoryTutorial(category: skirt, tutorial: tut2)
+    
+    CategoryTutorial(category: belt, tutorial: tut1),
+    
+    CategoryTutorial(category: belt, tutorial: tut2),
+   
+    CategoryTutorial(category: belt, tutorial: tut3),
+    
+    
 ]
