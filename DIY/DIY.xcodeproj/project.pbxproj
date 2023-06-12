@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72381C9B2A337EB40003CCC7 /* Favorites_Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72381C9A2A337EB40003CCC7 /* Favorites_Tutorial.swift */; };
+		72381C9B2A337EB40003CCC7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72381C9A2A337EB40003CCC7 /* ViewModel.swift */; };
 		D60BEFEF2A3081F2001EF681 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFEE2A3081F2001EF681 /* Data.swift */; };
 		D60BEFF12A30823A001EF681 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF02A30823A001EF681 /* DataModel.swift */; };
-		D60BEFF32A308286001EF681 /* Category_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF22A308286001EF681 /* Category_View.swift */; };
-		D60BEFF52A309988001EF681 /* Tutorial_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF42A309988001EF681 /* Tutorial_View.swift */; };
-		D60BEFF72A30BE1D001EF681 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF62A30BE1D001EF681 /* CategoryViewModel.swift */; };
+		D60BEFF32A308286001EF681 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF22A308286001EF681 /* CategoriesView.swift */; };
+		D60BEFF52A309988001EF681 /* TutorialCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF42A309988001EF681 /* TutorialCardsView.swift */; };
 		D60BEFF92A31CA65001EF681 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60BEFF82A31CA65001EF681 /* ContentView.swift */; };
 		D6ABF3CE2A30722100E39D6F /* DIYApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF3CD2A30722100E39D6F /* DIYApp.swift */; };
 		D6ABF3D22A30722200E39D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6ABF3D12A30722200E39D6F /* Assets.xcassets */; };
@@ -40,12 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		72381C9A2A337EB40003CCC7 /* Favorites_Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites_Tutorial.swift; sourceTree = "<group>"; };
+		72381C9A2A337EB40003CCC7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		D60BEFEE2A3081F2001EF681 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D60BEFF02A30823A001EF681 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		D60BEFF22A308286001EF681 /* Category_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category_View.swift; sourceTree = "<group>"; };
-		D60BEFF42A309988001EF681 /* Tutorial_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutorial_View.swift; sourceTree = "<group>"; };
-		D60BEFF62A30BE1D001EF681 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		D60BEFF22A308286001EF681 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		D60BEFF42A309988001EF681 /* TutorialCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCardsView.swift; sourceTree = "<group>"; };
 		D60BEFF82A31CA65001EF681 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6ABF3CA2A30722100E39D6F /* DIY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DIY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ABF3CD2A30722100E39D6F /* DIYApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYApp.swift; sourceTree = "<group>"; };
@@ -87,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				D60BEFF82A31CA65001EF681 /* ContentView.swift */,
-				D60BEFF42A309988001EF681 /* Tutorial_View.swift */,
-				D60BEFF22A308286001EF681 /* Category_View.swift */,
+				D60BEFF42A309988001EF681 /* TutorialCardsView.swift */,
+				D60BEFF22A308286001EF681 /* CategoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -116,11 +114,10 @@
 		D6ABF3CC2A30722100E39D6F /* DIY */ = {
 			isa = PBXGroup;
 			children = (
-				D60BEFF62A30BE1D001EF681 /* CategoryViewModel.swift */,
 				D60BEFFC2A31CB5C001EF681 /* Views */,
 				D60BEFF02A30823A001EF681 /* DataModel.swift */,
 				D60BEFEE2A3081F2001EF681 /* Data.swift */,
-				72381C9A2A337EB40003CCC7 /* Favorites_Tutorial.swift */,
+				72381C9A2A337EB40003CCC7 /* ViewModel.swift */,
 				D6ABF3CD2A30722100E39D6F /* DIYApp.swift */,
 				D6ABF3D12A30722200E39D6F /* Assets.xcassets */,
 				D6ABF3D32A30722200E39D6F /* Preview Content */,
@@ -283,14 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D60BEFF72A30BE1D001EF681 /* CategoryViewModel.swift in Sources */,
-				72381C9B2A337EB40003CCC7 /* Favorites_Tutorial.swift in Sources */,
+				72381C9B2A337EB40003CCC7 /* ViewModel.swift in Sources */,
 				D60BEFF92A31CA65001EF681 /* ContentView.swift in Sources */,
 				D60BEFF12A30823A001EF681 /* DataModel.swift in Sources */,
-				D60BEFF52A309988001EF681 /* Tutorial_View.swift in Sources */,
+				D60BEFF52A309988001EF681 /* TutorialCardsView.swift in Sources */,
 				D60BEFEF2A3081F2001EF681 /* Data.swift in Sources */,
 				D6ABF3CE2A30722100E39D6F /* DIYApp.swift in Sources */,
-				D60BEFF32A308286001EF681 /* Category_View.swift in Sources */,
+				D60BEFF32A308286001EF681 /* CategoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DIY/Preview Content\"";
-				DEVELOPMENT_TEAM = SM7T3DGG59;
+				DEVELOPMENT_TEAM = 8Z2W4D24PD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -478,7 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DIY/Preview Content\"";
-				DEVELOPMENT_TEAM = SM7T3DGG59;
+				DEVELOPMENT_TEAM = 8Z2W4D24PD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

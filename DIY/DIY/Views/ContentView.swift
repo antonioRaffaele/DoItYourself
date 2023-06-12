@@ -7,38 +7,27 @@
 
 import SwiftUI
 
-let gestoreFavoriti = Favorites()
-
-func tutorialsInFavorites() -> [Tutorial] {
-    return tuttiITutorial.filter({ tutorial in
-        gestoreFavoriti.contains(tutorial)
-    })
-}
-
 struct ContentView: View {
-    @State var tutorialPrferiti = tutorialsInFavorites()
+    @EnvironmentObject var viewModel: ViewModel
     
     var body: some View {
         TabView {
-            Category_View()
+            CategoriesView()
                 .tabItem {
                     Label("Received", systemImage: "house")
-                        
                 }
-            Tutorial_View(TutorialsToDisplay: tutorialPrferiti)
+            TutorialCardsView(tutorials: viewModel.favorites)
+                          .environmentObject(viewModel)
                 .tabItem {
-                    Label("Saved", systemImage: "star")
-                        
-                }
-                .onChange(of: gestoreFavoriti) { _ in
-                    tutorialPrferiti = tutorialsInFavorites()
+                    Label("Favourites", systemImage: "star")
                 }
         }  .accentColor(Color("color1"))
-    } 
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ViewModel())
     }
 }

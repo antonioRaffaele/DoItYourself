@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-struct DIYApp: App {
+struct YourApp: App {
+    @StateObject private var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
