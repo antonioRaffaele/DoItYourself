@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
-    
+    @State private var selectedTutorial: Tutorial? = nil
+
     var body: some View {
         TabView {
             CategoriesView()
@@ -22,6 +23,9 @@ struct ContentView: View {
                     Label("Favourites", systemImage: "star")
                 }
         }  .accentColor(Color("color1"))
+            .sheet(item: $selectedTutorial) {
+                tutorial in TutorialStepsView(tutorial: tutorial)
+            }
     }
 }
 

@@ -9,12 +9,17 @@ import SwiftUI
 struct TutorialCardsView: View {
     @EnvironmentObject var viewModel: ViewModel
     var tutorials: [Tutorial]
+    @State private var selectedTutorial: Tutorial? = nil
+    @State private var isSheetPresented = false
+    
     
     var body: some View {
         ScrollView {
             VStack {
                 ForEach(tutorials) { tutorial in
+                    
                     HStack(spacing: 10) {
+                        
                         Image(tutorial.image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -57,9 +62,21 @@ struct TutorialCardsView: View {
                     }
                     .background(Color("color2"))
                     .cornerRadius(10)
+                    .onTapGesture {
+//                        print(selectedTutorial)
+                        selectedTutorial = tutorial
+                        isSheetPresented = true
+                    }
+                    
                 }
+                
             }
             .padding()
+        }
+        .sheet(isPresented: $isSheetPresented) {
+            if let selectedTutorial = selectedTutorial {
+                TutorialStepsView(tutorial: selectedTutorial)
+            }
         }
     }
 }
@@ -70,6 +87,7 @@ struct TutorialCardsView: View {
 
 struct TutorialsView_Previews: PreviewProvider {
     static var previews: some View {
-        TutorialCardsView(tutorials: tutorialsData).environmentObject(ViewModel())
+        TutorialCardsView(tutorials: tutorialsData)
+            .environmentObject(ViewModel())
     }
 }

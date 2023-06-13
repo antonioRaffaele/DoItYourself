@@ -19,6 +19,7 @@
 		D6ABF3DF2A30722200E39D6F /* DIYTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF3DE2A30722200E39D6F /* DIYTests.swift */; };
 		D6ABF3E92A30722200E39D6F /* DIYUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF3E82A30722200E39D6F /* DIYUITests.swift */; };
 		D6ABF3EB2A30722200E39D6F /* DIYUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ABF3EA2A30722200E39D6F /* DIYUITestsLaunchTests.swift */; };
+		D6B447C52A37674100A2F085 /* TutorialStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B447C42A37674100A2F085 /* TutorialStepsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D6ABF3E42A30722200E39D6F /* DIYUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DIYUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6ABF3E82A30722200E39D6F /* DIYUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYUITests.swift; sourceTree = "<group>"; };
 		D6ABF3EA2A30722200E39D6F /* DIYUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIYUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D6B447C42A37674100A2F085 /* TutorialStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStepsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		D60BEFFC2A31CB5C001EF681 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6B447C42A37674100A2F085 /* TutorialStepsView.swift */,
 				D60BEFF82A31CA65001EF681 /* ContentView.swift */,
 				D60BEFF42A309988001EF681 /* TutorialCardsView.swift */,
 				D60BEFF22A308286001EF681 /* CategoriesView.swift */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B447C52A37674100A2F085 /* TutorialStepsView.swift in Sources */,
 				72381C9B2A337EB40003CCC7 /* ViewModel.swift in Sources */,
 				D60BEFF92A31CA65001EF681 /* ContentView.swift in Sources */,
 				D60BEFF12A30823A001EF681 /* DataModel.swift in Sources */,
