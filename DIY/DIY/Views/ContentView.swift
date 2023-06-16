@@ -15,7 +15,7 @@ struct ContentView: View {
         TabView {
             CategoriesView()
                 .tabItem {
-                    Label("Received", systemImage: "house")
+                    Label("Wardrobe", systemImage: "cabinet.fill")
                 }
             TutorialCardsView(tutorials: viewModel.favorites)
                           .environmentObject(viewModel)

@@ -27,5 +27,7 @@ struct Tutorial: Identifiable {
 struct Step: Identifiable {
     var id = UUID()
     var image: String
+    var title: String
     var description: String
+    
 }
