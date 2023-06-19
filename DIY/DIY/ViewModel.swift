@@ -13,6 +13,8 @@ class ViewModel: ObservableObject {
     @Published var favorites: [Tutorial] = []
     @Published var tutorials: [Tutorial] = []
     
+    @Published var selectedTutorial: Tutorial? = nil
+    
     func isFavorite(tutorial: Tutorial) -> Bool {
             return favoriteTutorialsID.contains(tutorial.id)
         }
