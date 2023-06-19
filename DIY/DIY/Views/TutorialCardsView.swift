@@ -16,13 +16,15 @@ struct TutorialCardsView: View {
     var body: some View {
         
         
+        if tutorials.isEmpty {
+            Text("Oops...you don't have any favorite tutorial at the moment")
+                .font(.headline)
+                .padding()
+        } else {
+        
         ScrollView {
                     VStack {
-                        if tutorials.isEmpty {
-                            Text("Oops...you don't have any favorite tutorial at the moment")
-                                .font(.headline)
-                                .padding()
-                        } else {
+                        
                 
                 ForEach(tutorials) { tutorial in
                     
