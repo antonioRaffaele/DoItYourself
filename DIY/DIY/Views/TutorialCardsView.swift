@@ -77,6 +77,7 @@ struct TutorialCardsView: View {
                         selectedTutorial = tutorial
                         isSheetPresented = true
                     }
+
                     
                 }
                 
@@ -87,7 +88,10 @@ struct TutorialCardsView: View {
             if let selectedTutorial = selectedTutorial {
                 TutorialStepsView(tutorial: selectedTutorial)
             }
+
+                
         }
+
     }
 }
 

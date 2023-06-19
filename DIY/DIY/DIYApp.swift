@@ -10,11 +10,14 @@ import SwiftUI
 @main
 struct YourApp: App {
     @StateObject private var viewModel = ViewModel()
+    @Environment(\.colorScheme) var colorScheme
+    
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                .preferredColorScheme(colorScheme)
         }
     }
 }

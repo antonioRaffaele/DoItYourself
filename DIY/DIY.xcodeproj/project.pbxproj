@@ -86,10 +86,10 @@
 		D60BEFFC2A31CB5C001EF681 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6B447C42A37674100A2F085 /* TutorialStepsView.swift */,
 				D60BEFF82A31CA65001EF681 /* ContentView.swift */,
-				D60BEFF42A309988001EF681 /* TutorialCardsView.swift */,
 				D60BEFF22A308286001EF681 /* CategoriesView.swift */,
+				D6B447C42A37674100A2F085 /* TutorialStepsView.swift */,
+				D60BEFF42A309988001EF681 /* TutorialCardsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
