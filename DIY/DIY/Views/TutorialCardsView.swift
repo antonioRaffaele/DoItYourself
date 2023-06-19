@@ -14,8 +14,16 @@ struct TutorialCardsView: View {
     
     
     var body: some View {
+        
+        
         ScrollView {
-            VStack {
+                    VStack {
+                        if tutorials.isEmpty {
+                            Text("Oops...you don't have any favorite tutorial at the moment")
+                                .font(.headline)
+                                .padding()
+                        } else {
+                
                 ForEach(tutorials) { tutorial in
                     
                     HStack(spacing: 10) {
@@ -71,7 +79,7 @@ struct TutorialCardsView: View {
                 }
                 
             }
-            .padding()
+//            .padding()
         }
         .sheet(isPresented: $isSheetPresented) {
             if let selectedTutorial = selectedTutorial {
@@ -91,3 +99,4 @@ struct TutorialsView_Previews: PreviewProvider {
             .environmentObject(ViewModel())
     }
 }
+    }

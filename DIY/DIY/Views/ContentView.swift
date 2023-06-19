@@ -21,7 +21,10 @@ struct ContentView: View {
                           .environmentObject(viewModel)
                 .tabItem {
                     Label("Favourites", systemImage: "star")
+                    
                 }
+
+            
         }  .accentColor(Color("color1"))
             .sheet(item: $selectedTutorial) {
                 tutorial in TutorialStepsView(tutorial: tutorial)
