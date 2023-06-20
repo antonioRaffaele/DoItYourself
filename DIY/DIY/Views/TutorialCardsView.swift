@@ -19,14 +19,17 @@ struct TutorialCardsView: View {
             
             VStack {
                 
-            Image("PlaceholderFavourites")
+            Image("PlaceholderFavourites1")
                     .resizable()
-                    .opacity(0.2)
                     .scaledToFit()
+                    .frame(width: 300, height: 300)
+                    .opacity(0.15)
+                    .padding(-50)
+                    
+                
                 
             Text("Oops...there are no favourite tutorials")
                 .font(.headline)
-                .padding()
                 
             }
                 
@@ -70,7 +73,7 @@ struct TutorialCardsView: View {
                                     .font(.headline)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 Text(tutorial.description)
-                                    .font(.subheadline)
+                                    .font(.system(size: 14))
                                 
                                 HStack {
                                     Text(tutorial.difficulty)

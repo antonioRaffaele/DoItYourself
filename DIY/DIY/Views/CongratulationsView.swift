@@ -86,7 +86,6 @@ struct CongratulationsView: View {
             Text("Great Work!")
                 .font(.title)
                 .fontWeight(.bold)
-                .padding()
             
             Text("You have just created an amazing \(tutorial.name).")
                 .font(.headline)
@@ -96,7 +95,7 @@ struct CongratulationsView: View {
             ZStack {
                                 Rectangle()
                                     .stroke((Color("color1")), lineWidth: 6)
-                                    .opacity(0.9)
+                                    .opacity(0.8)
                                     .frame(width: 300, height: 220)
                                     .overlay(
                                         Text("Recycled polyester fibers, also called rPet, are made through recycling plastic bottles and more. Although fabrics made from this fiber are not natural or biodegradable, recycling generates 54 percent less CO2 emissions into the atmosphere.")
@@ -107,11 +106,11 @@ struct CongratulationsView: View {
                                             .fontWeight(.thin)
                                             .padding()
             
-                                    )
+                                    ) .padding(.bottom, 80)
                             }
             
             Spacer()
-        }
+        }              .padding(.top, 180)
     }
 }
 
