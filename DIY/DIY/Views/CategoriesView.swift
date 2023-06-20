@@ -18,7 +18,7 @@ struct CategoriesView: View {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 0) {
                     ForEach(viewModel.filteredCategories){ category in
-                        NavigationLink(destination: TutorialCardsView(tutorials: viewModel.fetchTutorials(category: category))) {
+                        NavigationLink(destination: TutorialCardsView(tutorials: viewModel.fetchTutorials(category: category), selectedCategory: category)) {
                             VStack {
                                 Image(category.image).resizable().frame(maxWidth: 120, maxHeight: 120).scaledToFill()
                                     .padding()

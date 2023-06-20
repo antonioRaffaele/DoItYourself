@@ -11,6 +11,7 @@ struct TutorialCardsView: View {
     var tutorials: [Tutorial]
     @State private var selectedTutorial: Tutorial? = nil
     @State private var isSheetPresented = false
+    var selectedCategory: Category? //add selected category property
     
     
     var body: some View {
@@ -88,7 +89,7 @@ struct TutorialCardsView: View {
                 
                 
             }
-            .navigationTitle("")
+            .navigationTitle(selectedCategory?.name.capitalized ?? "")
             
         }
     }
