@@ -12,7 +12,6 @@ class ViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var favorites: [Tutorial] = []
     @Published var tutorials: [Tutorial] = []
-    
     @Published var selectedTutorial: Tutorial? = nil
     
     func isFavorite(tutorial: Tutorial) -> Bool {

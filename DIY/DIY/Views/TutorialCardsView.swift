@@ -83,12 +83,12 @@ struct TutorialCardsView: View {
                 if let selectedTutorial = viewModel.selectedTutorial {
                     TutorialStepsView(tutorial: selectedTutorial)
                 } else {
-                    Text("Nothing")
+                    
                 }
                 
                 
             }
-            .navigationTitle("")
+            .navigationTitle("Text")
             
         }
     }

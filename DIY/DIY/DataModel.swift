@@ -22,6 +22,7 @@ struct Tutorial: Identifiable {
     var steps: [Step]
     var categoryName: String
     var difficulty: String
+//    var congrats: [Conclusion]
 }
 
 struct Step: Identifiable {
@@ -31,3 +32,10 @@ struct Step: Identifiable {
     var description: String
     
 }
+
+//struct Conclusion: Identifiable {
+//    var id = UUID()
+//    var conclusionText: String
+//    var subtitleText: String
+//    var tipText: String
+//}

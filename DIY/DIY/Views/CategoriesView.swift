@@ -34,7 +34,7 @@ struct CategoriesView: View {
                 .padding()
             }
             .searchable(text: $viewModel.searchText, prompt: "Search for a garment")
-            .navigationTitle("What to transform")
+            .navigationTitle("What to transform?")
         }
     }
     

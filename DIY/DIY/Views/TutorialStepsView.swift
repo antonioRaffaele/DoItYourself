@@ -9,28 +9,13 @@ import SwiftUI
 struct TutorialStepsView: View {
     let tutorial: Tutorial
     @State private var selectedStepIndex = 0
+    @State private var isTutorialComplete = false
     
     var body: some View {
         VStack {
-            
-            
             TabView(selection: $selectedStepIndex) {
                 ForEach(tutorial.steps.indices, id: \.self) { index in
-//                    ScrollView {
-//                        VStack(spacing: 10) {
-//                            Image(tutorial.steps[index].image)
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//
-//                            Text(tutorial.steps[index].description)
-//                                .font(.headline)
-//                                .multilineTextAlignment(.center)
-//                        }
-//                        .padding()
-//                        .background(Color("color2"))
-//                        .cornerRadius(10)
-//                    }
-                    VStack (alignment: .leading){
+                    VStack(alignment: .leading) {
                         Image(tutorial.steps[index].image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -39,15 +24,35 @@ struct TutorialStepsView: View {
                             .cornerRadius(20)
                         
                         Text(tutorial.steps[index].title)
-                            
                             .fontWeight(.semibold)
                             .padding()
                         
                         Text(tutorial.steps[index].description)
-                            
                             .padding()
                         
                         Spacer()
+                        
+                        HStack {
+                            Spacer()
+                            Button(action: {
+                                if index < tutorial.steps.count - 1 {
+                                    selectedStepIndex = index + 1
+                                } else {
+                                    isTutorialComplete = true
+                                }
+                            }) {
+                                Text("Next")
+                                    .font(.headline)
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .background(Color("color1"))
+                                    .cornerRadius(10)
+                            }
+                            .padding()
+                            .sheet(isPresented: $isTutorialComplete) {
+                                CongratulationsView(tutorial: tutorial) // creo nuova sheet per mostrare congrats e tip perché non sono riuscito a far funzionare lo swipe                                            automatico nel momento in cui si preme il tasto "Next"
+                            }
+                        }
                     }
                     .padding()
                     .cornerRadius(10)
@@ -55,11 +60,17 @@ struct TutorialStepsView: View {
             }
             .tabViewStyle(PageTabViewStyle())
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            
+        }
+        
             Text("Step \(selectedStepIndex + 1) of \(tutorial.steps.count)")
                 .font(.headline)
                 .padding(.top, 10)
         }
     }
-}
+
+
+
+
+
+
 
