@@ -16,9 +16,21 @@ struct TutorialCardsView: View {
     
     var body: some View {
         if tutorials.isEmpty {
+            
+            VStack {
+                
+            Image("PlaceholderFavourites")
+                    .resizable()
+                    .opacity(0.2)
+                    .scaledToFit()
+                
             Text("Oops...there are no favourite tutorials")
                 .font(.headline)
                 .padding()
+                
+            }
+                
+            
         } else {
             
             ScrollView {

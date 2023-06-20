@@ -18,7 +18,7 @@ struct Tutorial: Identifiable {
     var name: String
     var image: String
     var description: String
-    var duration: Int
+    var duration: String
     var steps: [Step]
     var categoryName: String
     var difficulty: String

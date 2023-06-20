@@ -88,7 +88,7 @@ struct CongratulationsView: View {
                 .fontWeight(.bold)
                 .padding()
             
-            Text("You have just created a / an \(tutorial.name).")
+            Text("You have just created an amazing \(tutorial.name).")
                 .font(.headline)
                 .padding()
                 .font(.system(size: 22))
@@ -99,9 +99,9 @@ struct CongratulationsView: View {
                                     .opacity(0.9)
                                     .frame(width: 300, height: 220)
                                     .overlay(
-                                        Text("Did you know that...")
+                                        Text("Recycled polyester fibers, also called rPet, are made through recycling plastic bottles and more. Although fabrics made from this fiber are not natural or biodegradable, recycling generates 54 percent less CO2 emissions into the atmosphere.")
                                             .multilineTextAlignment(.leading)
-                                            .font(.system(size: 20))
+                                            .font(.system(size: 18))
                                             .font(.subheadline)
                                             .foregroundColor(.black)
                                             .fontWeight(.thin)
@@ -114,4 +114,6 @@ struct CongratulationsView: View {
         }
     }
 }
+
+
 
