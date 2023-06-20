@@ -12,12 +12,13 @@ struct LoadingView: View {
         VStack {
             Image("AppIcon1")
                 .resizable()
-                .frame(width: 200, height: 200)
+                .frame(width: 240, height: 240)
             
             Text("Give your clothes a new life!")
-                .font(.system(size: 28, weight: .bold))
+                .font(.system(size: 26, weight: .bold))
                 .foregroundColor(Color("color1"))
-                .padding(.top, 10)
+                .padding(.bottom, 40)
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("color2"))

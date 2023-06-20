@@ -9,13 +9,13 @@ import SwiftUI
 struct TutorialCardsView: View {
     @EnvironmentObject var viewModel: ViewModel
     var tutorials: [Tutorial]
-    // @State private var selectedTutorial: Tutorial? = nil
+    @State private var selectedTutorial: Tutorial? = nil
     @State private var isSheetPresented = false
     
     
     var body: some View {
         if tutorials.isEmpty {
-            Text("Oops...you don't have any favorite tutorial at the moment")
+            Text("Oops...there are no favourite tutorials")
                 .font(.headline)
                 .padding()
         } else {
@@ -88,7 +88,7 @@ struct TutorialCardsView: View {
                 
                 
             }
-            .navigationTitle("Text")
+            .navigationTitle("")
             
         }
     }
