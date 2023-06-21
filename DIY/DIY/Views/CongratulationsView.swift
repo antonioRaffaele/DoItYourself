@@ -81,7 +81,11 @@ struct CongratulationsView: View {
     var body: some View {
         VStack {
             
-            Spacer()
+            Image(tutorial.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: UIScreen.main.bounds.height * 0.4, height: UIScreen.main.bounds.height * 0.45)
+                .cornerRadius(20)
             
             Text("Great Work!")
                 .font(.title)
@@ -98,7 +102,7 @@ struct CongratulationsView: View {
                                     .opacity(0.8)
                                     .frame(width: 300, height: 220)
                                     .overlay(
-                                        Text("Recycled polyester fibers, also called rPet, are made through recycling plastic bottles and more. Although fabrics made from this fiber are not natural or biodegradable, recycling generates 54 percent less CO2 emissions into the atmosphere.")
+                                        Text("Did you know that? Recycled polyester fibers, also called rPet, are made through recycling plastic bottles and more. Although fabrics made from this fiber are not natural, recycling generates 54 percent less CO2 emissions into the atmosphere.")
                                             .multilineTextAlignment(.leading)
                                             .font(.system(size: 18))
                                             .font(.subheadline)
@@ -107,7 +111,7 @@ struct CongratulationsView: View {
                                             .padding()
             
                                     ) .padding(.bottom, 80)
-                            }
+                            }  .padding(.bottom, 100)
             
             Spacer()
         }              .padding(.top, 180)

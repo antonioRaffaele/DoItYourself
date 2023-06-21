@@ -36,9 +36,11 @@ struct TutorialCardsView: View {
             
         } else {
             
+            
+            
             ScrollView {
+                
                 VStack {
-                    
                     
                     ForEach(tutorials) { tutorial in
                         
@@ -49,7 +51,7 @@ struct TutorialCardsView: View {
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 260, height: 260)
                                 .frame(width: UIScreen.main.bounds.height * 0.20, height: UIScreen.main.bounds.height * 0.20)
-                                .cornerRadius(0)
+                                .cornerRadius(10)
                             
                             VStack(alignment: .leading, spacing: 10) {
                                 HStack {
@@ -84,6 +86,7 @@ struct TutorialCardsView: View {
                                 Text(String(tutorial.duration))
                             }
                         }
+                        
                         .background(Color("color2"))
                         .cornerRadius(10)
                         .onTapGesture {
